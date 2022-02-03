@@ -3,17 +3,17 @@ console.log("hello");
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const tabs = document.querySelectorAll('tabheader__item'),
+    const tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent'),
-        tabsParent = document.querySelectorAll('.tabhear__items');
+        tabsParent = document.querySelector('.tabheader__items');
 
-    function hideTabContent() {
+    function hideTabContent() { 
         tabsContent.forEach(item => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
         });
 
-        tabs.forEach(item => {
+        tabs.forEach(item => {  
             item.classList.remove('tabheader__item_active');
         });
     }
